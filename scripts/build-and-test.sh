@@ -30,7 +30,7 @@
 #!/bin/bash
 
 # Define the URL of the JavaScript file in your Git repository
-JAVASCRIPT_FILE_URL="https://raw.githubusercontent.com/LabIdeas/LabTesting/main/path/to/your/helloworld.javascript"
+JAVASCRIPT_FILE_URL="https://raw.githubusercontent.com/LabIdeas/LabTesting/main/src/test/scala/helloworld.javascript"
 
 # Check if Node.js is installed
 if ! command -v node &> /dev/null; then
