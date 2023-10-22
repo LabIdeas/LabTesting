@@ -1,0 +1,31 @@
+format_version: 10
+pipelines:
+  TestPipelinetest2branch:
+    group: defaultGroup
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-fcd7310:
+        git: https://github.com/LabIdeas/LabTesting.git
+        shallow_clone: false
+        auto_update: true
+        branch: test2
+    stages:
+    - Build:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          RunJavascript:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - -c
+                - hello.js
+                command: /bin/bash
+                run_if: passed
