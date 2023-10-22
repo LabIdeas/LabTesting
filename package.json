@@ -1,0 +1,10 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description" : " simple helloworld",
+  "scripts": {
+    "start": "node hello.js"
+  },
+  "author":"LabIdeas",
+  "licence" :"MIT"
+}
