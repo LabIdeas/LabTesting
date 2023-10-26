@@ -5,6 +5,9 @@
   "scripts": {
     "start": "node hello.js"
   },
+  "dependencies":{
+    "axios": "1.5.1"
+  },
   "author":"LabIdeas",
   "licence" :"MIT"
 }
