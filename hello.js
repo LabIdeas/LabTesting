@@ -3,21 +3,15 @@
 
 
 
-const axios = require('axios');
+const axios = require("axios");
+const { expect } = require("chai");
 
-// Replace with the API endpoint URL
-const apiUrl = 'https://hub.worldpop.org/rest/data/pop';
+describe("GET API Request Tests", async () => {
+    it("should be able get user list", async () => {
+        const res = await axios.get('https://reqres.in/api/users?page=2');
+        console.log(res.data);
+        expect(res.data.page).equal(2);
+        expect(res.data.per_page).equal(6);
+    })
+})
 
-// Example test for making a GET request
-test('GET request to API endpoint', async () => {
-  try {
-    const response = await axios.get(apiUrl);
-    
-    // Replace with your test assertions
-    expect(response.status).toBe(200);
-    // Add more assertions as needed
-  } catch (error) {
-    // Handle any errors or failed assertions
-    throw error;
-  }
-});
