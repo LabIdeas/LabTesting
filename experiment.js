@@ -2,7 +2,7 @@ var Mocha = require('mocha');
 var report = {};
 
 new Mocha().
-  addFile("test/toyTest").
+  addFile("").
   reporter("json", {"output-object": report}).
   run(function (failures) {
     process.on('exit', function () {
