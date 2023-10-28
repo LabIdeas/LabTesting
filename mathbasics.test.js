@@ -1,5 +1,6 @@
 const {add,sub} = require('./mathbasics');
-const  assert = require('chai').assert;
+//const  assert = require('chai').assert;
+import {assert} from 'chai';
 
 describe('add 1+2 to equal 3', () => {
     it('should add two numbers', function () {
