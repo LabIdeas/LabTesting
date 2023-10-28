@@ -5,6 +5,6 @@ test('add 1+2 to equal 3', async () => {
 });
 
 test('sub 1-2 to equal -1', async () => {
-    expect(add(1,2).toBe(-1);
+    expect(sub(1,2).toBe(-1);
 });
 
