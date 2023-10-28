@@ -1,11 +1,11 @@
 // hello.js
 console.log("Hello, World!");
 
-exports.add = function(){
+exports.add = function(a,b){
     return a+b
 }
 
-exports.sub = function(){
+exports.sub = function(a,b){
     return a-b
 }
 
