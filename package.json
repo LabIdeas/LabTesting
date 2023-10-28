@@ -4,7 +4,7 @@
   "description" : " simple helloworld",
   "scripts": {
     "start": "node hello.js",
-    "test": "mocha"
+    "test": "mocha --config mocha-config.js"
   },
   "dependencies":{
     "mocha": "10.2.0"
