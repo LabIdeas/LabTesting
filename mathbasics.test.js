@@ -1,10 +1,13 @@
 const {add,sub} = require('./mathbasics');
+const  assert = require('chai').assert;
 
-test('add 1+2 to equal 3', async () => {
-    expect(add(1,2).toBe(3);
+describe('add 1+2 to equal 3', () => {
+    it('should add two numbers', function () {
+      assert.equal(add(1,2), 3);
+    });
+     it('should sub two numbers', function () {
+      assert.equal(sub(1,2), -1);
+    });
 });
 
-test('sub 1-2 to equal -1', async () => {
-    expect(sub(1,2).toBe(-1);
-});
 
