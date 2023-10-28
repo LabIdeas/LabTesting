@@ -4,14 +4,10 @@
   "description" : " simple helloworld",
   "scripts": {
     "start": "node hello.js",
-    "test": "jest"
+    "test": "mocha"
   },
   "dependencies":{
-    "jest": "29.7.0"
-  },
-  "engines": {
-    "npm": ">=8.0.0",
-    "node": ">=16.0.0"
+    "mocha": "10.2.0"
   },
   "author":"LabIdeas",
   "licence" :"MIT"
