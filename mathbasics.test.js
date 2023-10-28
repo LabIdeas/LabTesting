@@ -1,4 +1,4 @@
-const {add,sub} = require('./mathbasics');
+const {add,sub} = require('./mathbasics.js');
 //const  assert = require('chai').assert;
 import {assert} from 'chai';
 
