@@ -8,7 +8,8 @@
   },
   "dependencies":{
     "mocha": "10.2.0",
-    "chai": "4.3.10"
+    "chai": "4.3.10",
+    "mocha-json-output-reporter": "2.1.0"
   },
   "author":"LabIdeas",
   "licence" :"MIT"
