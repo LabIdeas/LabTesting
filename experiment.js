@@ -1,13 +1,25 @@
 var Mocha = require('mocha');
-var report = {};
 
-new Mocha().
-  addFile("").
-  reporter("json", {"output-object": report}).
-  run(function (failures) {
-    process.on('exit', function () {
-      var s = report.stats;
-      console.log("percentage: " + s.passes/(s.passes+s.failures));
-      process.exit(failures > 0 ? 1 : 0);
+var mocha = new Mocha({});
+
+mocha.addFile('./mathbasics.js')
+
+mocha.run()
+    .on('test', function(test) {
+        console.log('Test started: '+test.title);
+    })
+    .on('test end', function(test) {
+        console.log('Test done: '+test.title);
+    })
+    .on('pass', function(test) {
+        console.log('Test passed');
+        console.log(test);
+    })
+    .on('fail', function(test, err) {
+        console.log('Test fail');
+        console.log(test);
+        console.log(err);
+    })
+    .on('end', function() {
+        console.log('All done');
     });
-  });
