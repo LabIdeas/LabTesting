@@ -2,7 +2,7 @@ var Mocha = require('mocha');
 
 var mocha = new Mocha({});
 
-mocha.addFile('./mathbasics.js')
+mocha.addFile('./mathbasics.test.js')
 
 mocha.run()
     .on('test', function(test) {
