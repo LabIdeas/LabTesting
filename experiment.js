@@ -42,7 +42,8 @@ mocha.run()
         // console.log('All done');
         inner_json['All done']=getTime()
         outer_json[getTime()]=inner_json
-        console.log("build_output=\n"+outer_json)
+        console.log("build_output=\n")
+        console.log(outer_json)
     });
 
 
