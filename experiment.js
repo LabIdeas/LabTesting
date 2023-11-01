@@ -18,21 +18,21 @@ mocha.addFile('./mathbasics.test.js')
 mocha.run()
     .on('test', function(test) {
         //console.log('Test started: '+test.title);
-        inner_json['Test started-'+getTime()]=test.title
+        inner_json["Test started-"+getTime()]=test.title
     })
     .on('test end', function(test) {
         //console.log('Test done: '+test.title);
-        inner_json['Test ended-'+getTime()]=test.title
+        inner_json["Test ended-"+getTime()]=test.title
     })
     .on('pass', function(test) {
         // console.log('Test passed');
         // console.log(test);
-        inner_json['Test passed-'+counter.toString()]=test
+        inner_json["Test passed-"+counter.toString()]=test
         counter+=1
     })
     .on('fail', function(test, err) {
-        inner_json['Test fail-'+counter.toString()]=test
-        inner_json['Test fail Error']=err
+        inner_json["Test fail-"+counter.toString()]=test
+        inner_json["Test fail Error"]=err
         counter+=1
         // console.log('Test fail');
         // console.log(test);
@@ -40,7 +40,7 @@ mocha.run()
     })
     .on('end', function() {
         // console.log('All done');
-        inner_json['All done']=getTime()
+        inner_json["All done"]=getTime()
         outer_json[getTime()]=inner_json
         console.log("build_output=")
         console.log(outer_json)
