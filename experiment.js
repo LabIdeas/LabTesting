@@ -27,11 +27,11 @@ mocha.run()
     .on('pass', function(test) {
         // console.log('Test passed');
         // console.log(test);
-        inner_json["Test passed-"+counter.toString()]=test
+        inner_json["Test passed-"+counter.toString()]=String(test)
         counter+=1
     })
     .on('fail', function(test, err) {
-        inner_json["Test fail-"+counter.toString()]=test
+        inner_json["Test fail-"+counter.toString()]=String(test)
         inner_json["Test fail Error"]=err
         counter+=1
         // console.log('Test fail');
