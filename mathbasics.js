@@ -1,6 +1,3 @@
-// hello.js
-console.log("Hello");
-
 const add = function(a,b){
     return a+b;
 };
