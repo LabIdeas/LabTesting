@@ -17,19 +17,19 @@ mocha.addFile('./mathbasics.test.js')
 mocha.run()
     .on('test', function(test) {
         //console.log('Test started: '+test.title);
-        inner_json['Test started']=test.title
+        inner_json['Test started-'+getTime()]=test.title
     })
     .on('test end', function(test) {
         //console.log('Test done: '+test.title);
-        inner_json['Test ended']=test.title
+        inner_json['Test ended-'+getTime()]=test.title
     })
     .on('pass', function(test) {
         // console.log('Test passed');
         // console.log(test);
-        inner_json['Test passed']=test
+        inner_json['Test passed-'+getTime()]=test
     })
     .on('fail', function(test, err) {
-        inner_json['Test fail']=test
+        inner_json['Test fail-'+getTime()]=test
         inner_json['Test fail Error']=err
         // console.log('Test fail');
         // console.log(test);
