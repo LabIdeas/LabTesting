@@ -2,7 +2,7 @@ var Mocha = require('mocha');
 
 var mocha = new Mocha({});
 
-var output_json={}
+var outer_json={}
 var inner_json={}
 
 function getTime() {
