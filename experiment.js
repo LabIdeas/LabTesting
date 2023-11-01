@@ -32,7 +32,7 @@ mocha.run()
     })
     .on('fail', function(test, err) {
         inner_json["Test fail-"+counter.toString()]=String(test)
-        inner_json["Test fail Error"]=err
+        inner_json["Test fail Error"]=String(err)
         counter+=1
         // console.log('Test fail');
         // console.log(test);
