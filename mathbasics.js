@@ -1,5 +1,5 @@
 // hello.js
-console.log("Hello, World!");
+console.log("Hello");
 
 const add = function(a,b){
     return a+b;
