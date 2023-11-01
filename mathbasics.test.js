@@ -3,12 +3,20 @@ const  assert = require('chai').assert;
 //import {assert} from 'chai';
 
 describe('maths basic tests', () => {
-    it('should add two numbers', function () {
+    it('should add two positive numbers', function () {
       assert.equal(add(1,2), 3);
         //assert.equal(mathbasics.add(1,2), 3);
     });
-     it('should sub two numbers', function () {
+    it('should add two neg numbers', function () {
+      assert.equal(add(-1,-22), -23);
+        //assert.equal(mathbasics.add(1,2), 3);
+    });
+     it('should sub two positive numbers', function () {
       assert.equal(sub(1,2), -1);
+         //assert.equal(mathbasics.sub(1,2), -1);
+    });
+    it('should sub two neg numbers', function () {
+      assert.equal(sub(-1,-2), -3);
          //assert.equal(mathbasics.sub(1,2), -1);
     });
     it('should give wrong answer', function () {
