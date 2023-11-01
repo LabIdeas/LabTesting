@@ -4,6 +4,7 @@ var mocha = new Mocha({});
 
 var outer_json={}
 var inner_json={}
+var counter=0
 
 function getTime() {
     var today = new Date();
@@ -17,20 +18,22 @@ mocha.addFile('./mathbasics.test.js')
 mocha.run()
     .on('test', function(test) {
         //console.log('Test started: '+test.title);
-        inner_json['Test started-'+getTime()]=test.title
+        inner_json['Test started-'+counter.toString()]=test.title
     })
     .on('test end', function(test) {
         //console.log('Test done: '+test.title);
-        inner_json['Test ended-'+getTime()]=test.title
+        inner_json['Test ended-'+counter.toString()]=test.title
     })
     .on('pass', function(test) {
         // console.log('Test passed');
         // console.log(test);
-        inner_json['Test passed-'+getTime()]=test
+        inner_json['Test passed-'+counter.toString()]=test
+        counter+=1
     })
     .on('fail', function(test, err) {
-        inner_json['Test fail-'+getTime()]=test
+        inner_json['Test fail-'+counter.toString()]=test
         inner_json['Test fail Error']=err
+        counter+=1
         // console.log('Test fail');
         // console.log(test);
         // console.log(err);
