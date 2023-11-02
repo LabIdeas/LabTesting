@@ -36,7 +36,7 @@ mocha.run()
     .on('pass', function(test) {
         // console.log('Test passed');
         // console.log(test);
-        inner_json["Test passed-"+counter.toString()]=test
+        inner_json["Test passed-"+counter.toString()]=test.title
         counter+=1
     })
     .on('fail', function(test, err) {
