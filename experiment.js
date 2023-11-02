@@ -55,5 +55,8 @@ mocha.run()
         console.log(outer_json)
     });
 
-
+afterEach(function() {
+  console.log = originalLogFunction; // undo dummy log function
+  console.log(outer_json)
+});
 
