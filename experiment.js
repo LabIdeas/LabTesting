@@ -16,12 +16,12 @@ function getTime() {
 
 const originalLogFunction = console.log;
 let output;
-beforeEach(function(done) {
-  output = '';
-  console.log = (msg) => {
-    output += msg + '\n';
-  };
-});
+// beforeEach(function(done) {
+//   output = '';
+//   console.log = (msg) => {
+//     output += msg + '\n';
+//   };
+// });
 
 mocha.addFile('./mathbasics.test.js')
 mocha.run()
