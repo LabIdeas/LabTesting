@@ -6,6 +6,7 @@ var outer_json={}
 var inner_json={}
 var counter=0
 
+
 function getTime() {
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -36,8 +37,11 @@ mocha.run()
     .on('pass', function(test) {
         // console.log('Test passed');
         // console.log(test);
-        inner_json["Test passed-"+counter.toString()]=test.title
-        counter+=1
+        // inner_json["Test passed-"+counter.toString()]=test.title
+        inner_json[test.title]={
+            duration: test.duration,
+            state: test.state,
+            speed: test.speed}
     })
     .on('fail', function(test, err) {
         inner_json["Test fail-"+counter.toString()]=test
