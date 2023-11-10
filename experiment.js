@@ -47,10 +47,10 @@ mocha.run()
         // inner_json["Test fail-"+counter.toString()]=test
         // inner_json["Test fail Error"]=err
         inner_json[test.title]={
-            duration: test.duration,
-            state: test.state,
-            speed: test.speed,
-            error: err}
+            "duration": test.duration,
+            "state": test.state,
+            "speed": test.speed,
+            "error": err}
         counter+=1
         // console.log('Test fail');
         // console.log(test);
