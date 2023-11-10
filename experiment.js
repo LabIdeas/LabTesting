@@ -28,11 +28,11 @@ mocha.addFile('./mathbasics.test.js')
 mocha.run()
     .on('test', function(test) {
         //console.log('Test started: '+test.title);
-        inner_json["Test started-"+getTime()]=test.title
+        //inner_json["Test started-"+getTime()]=test.title
     })
     .on('test end', function(test) {
         //console.log('Test done: '+test.title);
-        inner_json["Test ended-"+getTime()]=test.title
+        //inner_json["Test ended-"+getTime()]=test.title
     })
     .on('pass', function(test) {
         // console.log('Test passed');
