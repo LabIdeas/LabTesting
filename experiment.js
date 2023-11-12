@@ -49,8 +49,9 @@ mocha.run()
         inner_json[test.title]={
             "duration": test.duration,
             "state": test.state,
-            "speed": test.speed,
-            "error": err}
+            "speed": test.speed
+            // "error": err}
+        }
         counter+=1
         // console.log('Test fail');
         // console.log(test);
