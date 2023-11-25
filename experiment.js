@@ -5,13 +5,13 @@ var mocha = new Mocha({});
 var outer_json={}
 var inner_json={}
 var counter=0
-
+var suite_name = 'mathbasics.test.js'
 
 function getTime() {
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date+' '+time;
+    var dateTime = suite_name +'_'+date+':'+time;
     return dateTime;
 }
 
@@ -24,7 +24,7 @@ let output;
 //   };
 // });
 
-mocha.addFile('./mathbasics.test.js')
+mocha.addFile('./'+suite_name)
 mocha.run()
     .on('test', function(test) {
         //console.log('Test started: '+test.title);
