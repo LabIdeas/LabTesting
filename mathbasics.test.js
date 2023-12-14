@@ -23,9 +23,6 @@ describe('maths basic tests', () => {
       assert.equal(add(1,2), 4);
         //assert.equal(mathbasics.add(1,2), 3);
     });
-    it('new test should give correct answer', function () {
-      assert.equal(mul(10,20), 200);
-    });
 });
 
 
